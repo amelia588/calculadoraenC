@@ -101,6 +101,12 @@ namespace calculadora1
                 case 2:
                     resultado = valor1 - valor2;
                     break;
+                case 3:
+                    resultado = valor1 * valor2;
+                    break;
+                case 4:
+                    resultado = valor1 / valor2;
+                    break;
             }
 
             tbDisplay.Text = resultado.ToString();
@@ -119,6 +125,34 @@ namespace calculadora1
             operacion = 2;
             valor1 = Convert.ToDouble(tbDisplay.Text);
             tbDisplay.Text = "";
+        }
+
+        private void btnMultiplicacion_Click(object sender, EventArgs e)
+        {
+            // boton multiplicacion
+            operacion = 3;
+            valor1 = Convert.ToDouble(tbDisplay.Text);
+            tbDisplay.Text = "";
+        }
+
+        private void btnDivicion_Click(object sender, EventArgs e)
+        {
+            // boton division
+            operacion = 4;
+            valor1 = Convert.ToDouble(tbDisplay.Text);
+            tbDisplay.Text = "";
+
+        }
+
+        private void btnPunto_Click(object sender, EventArgs e)
+        {
+            // boton punto
+            tbDisplay.Text = tbDisplay.Text + ".";
+        }
+
+        private void tbDisplay_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
